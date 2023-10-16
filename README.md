@@ -7,3 +7,12 @@
 미리보기 : 
 
 ## 사용 스택
+
+## 라이브러리 설치
+sass를 설치 : `npm i sass`
+
+## 기본 명령어 
+git add .
+git status
+git commit -m "dd"
+git push -u origin main
