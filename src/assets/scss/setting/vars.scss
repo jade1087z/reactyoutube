@@ -17,12 +17,13 @@
         line-height: 1.4;
     }
 
-    --black: #000;
-    --black100: #000;
-    --black200: #000;
-    --black300: #000;
-    --black400: #000;
-    --black500: #000;
+    ---black: #000;
+    --black100: #333;
+    --black200: #555;
+    --black300: #777;
+    --black400: #999;
+    --black500: #d7d7d7;
+    --black600: #28282800;
 
     --white: #fff;
     --white100: #fff;
@@ -31,6 +32,19 @@
     --white400: #fff;
     --white500: #fff;
 
+    --primary-color: #eee;
+    --gold: #b48505;
+    --green: #03c75a;
+
+
     --Ddag: "lotteriaDdag";
     --chap: "lotteriaChab";
+
+    
 }
+
+.box {
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    // box-shadow: 2px 2px 5px #00000031;
+} 
