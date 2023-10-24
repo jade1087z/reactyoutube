@@ -12,15 +12,15 @@ const Video = () => {
     //         .then((data) => console.log(data))
     //         .then((data) => setVideoDetail(data.items[0]));
     // }, [videoId]);
-    
 
     useEffect(() => {
-        fetchFromAPI(`videos?part=snippet,statistics&id=${videoId}`)
-        .then((data) => {
-            console.log(data);
-            console.log(data.items[0].snippet.title);
-            setVideoDetail(data.items[0]);
-        })
+        fetchFromAPI(`videos?part=snippet,statistics&id=${videoId}`).then(
+            (data) => {
+                console.log(data);
+                setVideoDetail(data.items[0]);
+                console.log(data.items[0].snippet.title);
+            }
+        );
     }, [videoId]);
 
     return (
@@ -36,11 +36,21 @@ const Video = () => {
                             style={{ position: "absoulte", top: 0, left: 0 }}
                         />
                     </div>
-                    <div>
+                    <div className="video__info">
+                        <h2 className="video__title">
+                            {videoDetail.snippet.title}
+                        </h2>
+                        <div className="video__channel">
+                            <div className="id"></div>
+                            <div className="count">
+                                <span className="view">조회수 {videoDetail.statistics.viewCount}<br /></span>
+                                <span className="like">좋아요 {videoDetail.statistics.likeCount}<br /></span>
+                                <span className="comment">댓글 {videoDetail.statistics.commentCount}<br /></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}
-
         </section>
     );
 };
