@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchFromAPI } from "../utils/api";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 
 const Video = () => {
@@ -37,11 +37,15 @@ const Video = () => {
                         />
                     </div>
                     <div className="video__info">
-                        <h2 className="video__title">
+                        <h3 className="video__title">
                             {videoDetail.snippet.title}
-                        </h2>
+                        </h3>
                         <div className="video__channel">
-                            <div className="id"></div>
+                            <div className="id">
+                                
+                                <Link to={`/channel/${videoId}/${videoDetail.snippet.channelId}`}></Link>
+                                {videoDetail.snippet.channelTitl}
+                            </div>
                             <div className="count">
                                 <span className="view">조회수 {videoDetail.statistics.viewCount}<br /></span>
                                 <span className="like">좋아요 {videoDetail.statistics.likeCount}<br /></span>

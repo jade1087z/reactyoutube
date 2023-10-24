@@ -11,13 +11,12 @@ import Main from "./components/section/Main";
 import Footer from "./components/section/Footer";
 import Search from "./pages/Search";
 import ScrollTo from "./utils/scollTo";
-
+import Channel from "./pages/Channel";
 const App = () => {
     return (
         <BrowserRouter>
             <ScrollTo />
             <Header />
-
             <Main>
                 <Routes>
                     <Route path="/" element={<Home />} />
@@ -25,6 +24,7 @@ const App = () => {
                     <Route path="/youtuber" element={<Youtuber />} />
                     <Route path="/search/:searchId" element={<Search />} />
                     <Route path="/video/:videoId" element={<Video />} />
+                    <Route path="/channel/videoId/:channelId" element={<Channel />} />
                     
                     <Route path="*" element={<Not />} />
                 </Routes>

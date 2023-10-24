@@ -1,11 +1,10 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom';
 
 import Logo from './header/Logo';
 import Menu from './header/Menu';
 import Sns from './header/Sns';
-
+import Bar from './Bar';
 
 const Header = () => {
   return (
@@ -13,7 +12,7 @@ const Header = () => {
         <Logo />
         <Menu />
         <Sns />
-        
+        <Bar />
     </header>
   )
 }

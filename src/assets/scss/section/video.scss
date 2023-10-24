@@ -23,11 +23,28 @@
             h3 {
                 margin-top: 10px;
                 margin-bottom: 5px;
-                @include lin-one;
+                @include line-one;
+                font-weight: 700;
             }
 
             p {
-                @include lin-one;
+                @include line-one;
+                font-weight: 600;
+            }
+            .info {
+                display: flex;
+                justify-content: space-between;
+                color: var(--black300);
+
+                .author {
+                    @include line-one;
+                    font-size: 14px;
+                    text-decoration: underline;
+                    text-underline-position: under;
+                }
+                &:hover {
+                    
+                }
             }
         }
     }
@@ -40,7 +57,47 @@
         .video__play {
             width: 100%;
             padding-bottom: 56.25%; // 16:9
-            position: relative;asdfasdf
+            position: relative;
         }
     }
+
+
+    
+
 }
+
+.video__info {
+    .video__title {
+        padding-top: 10px;
+    }
+    .video__channel {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .id {
+        
+        a {
+            border: 1px solid var(--black300);
+            padding: 7px 20px;
+            border-radius: 30px;
+        }
+    }
+    .count {
+        span {
+            border: 1px solid var(--black300);
+            padding: 7px 20px;
+            border-radius: 30px;
+            margin-left: 5px;
+            background-color: var(--black100);
+            
+        }
+    }
+
+    .video__desc {
+        border-top: 1px solid var(--black600);
+        white-space: pre-line;
+        padding-top: 40px;
+    }
+}
+//  댓글 api를 가져와 댓글 보기 기능 구현하기 
