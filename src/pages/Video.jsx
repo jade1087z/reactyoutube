@@ -18,7 +18,7 @@ const Video = () => {
             (data) => {
                 console.log(data);
                 setVideoDetail(data.items[0]);
-                console.log(data.items[0].snippet.title);
+                // console.log(data.items[0].snippet.title);
             }
         );
     }, [videoId]);

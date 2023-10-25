@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { fetchFromAPI } from "../utils/api";
+import VideoSearch from "../components/video/VideoSearch";
 
-const Channel = () => {
-    const { videoId, channelId } = useParams();
+const Channel = ({videos}) => {
+    const { channelId } = useParams();
     const [channelDetail, setChannelDetail] = useState();
+    const [channelVideo, setChannelVideo] = useState([]);
 
     useEffect(() => {
         const fetchResults = async () => {
@@ -12,8 +14,15 @@ const Channel = () => {
                 const data = await fetchFromAPI(
                     `channels?part=snippet&id=${channelId}`
                 );
+                const videosData = await fetchFromAPI(
+                    `search?channelId=${channelId}&part=snippet&order=date`
+                );
                 setChannelDetail(data.items[0]);
+                setChannelVideo(videosData.items);
+                
+                console.log(videosData);
                 console.log(data.items[0]);
+
             } catch (error) {
                 console.log("Error fetching data", error);
             }
@@ -40,7 +49,7 @@ const Channel = () => {
 
                     <div className="channel__info">
                         <div className="main__video"></div>
-                       
+
                         <div className="info">
                             <h3 className="title">
                                 {channelDetail.snippet.title}
@@ -61,7 +70,9 @@ const Channel = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="channel__video video__inner"></div>
+                    <div className="channel__video video__inner">
+                        <VideoSearch videos={channelVideo}/>
+                    </div>
                     <div className="channel__more"></div>
                 </div>
             )}
