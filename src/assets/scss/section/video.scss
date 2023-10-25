@@ -3,133 +3,147 @@
     grid-template-columns: repeat(4, 24%);
     justify-content: space-between;
 
+    @media (max-width: 1400px){
+        grid-template-columns: repeat(3, 32%);
+        gap: 15px;
+    }
+    @media (max-width: 1200px){
+        grid-template-columns: repeat(2, 49%);
+        gap: 10px;
+    }
+    @media (max-width: 400px){
+        grid-template-columns: repeat(1, 100%);
+    }
+
     .video {
-        margin-bottom: 50px;
-        background-color: var(--white);
+        margin-bottom: 20px;
+    }
+}
+
+.video__inner.search {
+    min-height: 100vh;
+    
+    .video {
+        margin-bottom: 40px;
+        border-radius: 10px;
+        background-color: #111;
+
+        @media (max-width: 600px){
+            margin-bottom: 10px;
+        }
+
         .video__thumb {
-            width: 100%;
-            background-color: #000;
+
             a {
+                position: relative;
                 display: block;
                 cursor: pointer;
                 width: 100%;
-                padding-bottom: 56.25%; // 16:9 비율
+                padding-bottom: 56.25%;
+                position: relative;
                 background-size: cover;
                 background-position: center;
             }
         }
 
         .video__info {
-            h3 {
-                margin-top: 10px;
-                margin-bottom: 5px;
-                @include line-one;
-                font-weight: 700;
-            }
-
-            p {
-                @include line-one;
-                font-weight: 600;
+            padding: 10px 15px;
+            color: #fff;
+    
+            .title {
+                font-size: 1rem;
+                @include line-two;
             }
             .info {
                 display: flex;
                 justify-content: space-between;
-                color: var(--black300);
-
+                align-items: flex-end;
+                
                 .author {
                     @include line-one;
-                    font-size: 14px;
-                    text-decoration: underline;
-                    text-underline-position: under;
+                    color: #666;
+                    transition: all 0.3s;
+    
+                    &:hover {
+                        color: #fff;
+                    }
                 }
-                &:hover {
-                    
+                .date {
+                    font-size: 14px;
+                    color: #666;
                 }
             }
         }
     }
 }
 
-// 비디오 상세 페이지
-#videoViewPage {
+.video__more {
+    button {
+        width: 100%;
+        border: 0;
+        padding: 20px;
+        background-color: var(--black100);
+        color: var(--white);
+        transition: all 0.3s;
+        margin-bottom: 20px;
+        cursor: pointer;
+        border-radius: 40px;
 
-    .video__view {
-        .video__play {
-            width: 100%;
-            padding-bottom: 56.25%; // 16:9
-            position: relative;
+        &:hover {
+            background-color: var(--black200);
         }
+    }
+}
 
-        .video__info {
+// 비디오 페이지 
+#videoViewPage {
+    padding: 0;
 
-            .video__title {
-                padding-top: 20px;
-                margin-bottom: 20px;
-                font-size: 30px;
-                border-bottom: 1px solid var(--black600);
-                padding-bottom: 15px;
-            }
-            .video__channel {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 40px;
-                margin-top: 40px;
-            }
+    @media (max-width: 800px){
+        margin-top: 80px;
+    }
+}
+.video__view {
+
+    .video__play {
+        width: 100%;
+        padding-bottom: 56.2%;
+        position: relative;
+    }
+
+    .video__info {
+        padding: 40px;
+
+        .video__channel {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            background-color: var(--black100);
+            padding: 10px 30px;
+            border-radius: 40px;
 
             .id {
-                a {
-                    border: 1px solid var(--black300);
-                    padding: 7px 20px;
-                    border-radius: 30px;
-                }
+                font-weight: 800;
             }
 
             .count {
+
                 span {
-                    padding: 7px 20px;
-                    border-radius: 30px;
+                    border-radius: 40px;
+                    font-size: 14px;
+                    margin-left: 10px;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                        vertical-align: -5px;
+                        margin-right: 5px;
+                    }
                 }
             }
         }
-    }
-
-
-    
-
-}
-
-.video__info {
-    .video__title {
-        padding-top: 10px;
-    }
-    .video__channel {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 40px;
-    }
-    .id {
-        
-        a {
-            border: 1px solid var(--black300);
-            padding: 7px 20px;
-            border-radius: 30px;
+        .video__desc {
+            white-space: pre-line;
         }
-    }
-    .count {
-        span {
-            border: 1px solid var(--black300);
-            padding: 7px 20px;
-            border-radius: 30px;
-            margin-left: 5px;
-            background-color: var(--black100);
-            
-        }
-    }
-
-    .video__desc {
-        border-top: 1px solid var(--black600);
-        white-space: pre-line;
-        padding-top: 40px;
-    }
+    } 
 }
-//  댓글 api를 가져와 댓글 보기 기능 구현하기 

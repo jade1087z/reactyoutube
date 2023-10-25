@@ -12,6 +12,7 @@ import Footer from "./components/section/Footer";
 import Search from "./pages/Search";
 import ScrollTo from "./utils/scollTo";
 import Channel from "./pages/Channel";
+
 const App = () => {
     return (
         <BrowserRouter>
