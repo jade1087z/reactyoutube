@@ -3,18 +3,17 @@
     grid-template-columns: repeat(4, 24%);
     justify-content: space-between;
 
-    @media (max-width: 1400px){
+    @media (max-width: 1400px) {
         grid-template-columns: repeat(3, 32%);
         gap: 15px;
     }
-    @media (max-width: 1200px){
+    @media (max-width: 1200px) {
         grid-template-columns: repeat(2, 49%);
         gap: 10px;
     }
-    @media (max-width: 400px){
+    @media (max-width: 400px) {
         grid-template-columns: repeat(1, 100%);
     }
-
     .video {
         margin-bottom: 20px;
     }
@@ -22,18 +21,17 @@
 
 .video__inner.search {
     min-height: 100vh;
-    
+
     .video {
         margin-bottom: 40px;
         border-radius: 10px;
         background-color: #111;
 
-        @media (max-width: 600px){
+        @media (max-width: 600px) {
             margin-bottom: 10px;
         }
 
         .video__thumb {
-
             a {
                 position: relative;
                 display: block;
@@ -49,7 +47,7 @@
         .video__info {
             padding: 10px 15px;
             color: #fff;
-    
+
             .title {
                 font-size: 1rem;
                 @include line-two;
@@ -58,12 +56,12 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
-                
+
                 .author {
                     @include line-one;
                     color: #666;
                     transition: all 0.3s;
-    
+
                     &:hover {
                         color: #fff;
                     }
@@ -95,16 +93,15 @@
     }
 }
 
-// 비디오 페이지 
+// 비디오 페이지
 #videoViewPage {
     padding: 0;
 
-    @media (max-width: 800px){
+    @media (max-width: 800px) {
         margin-top: 80px;
     }
 }
 .video__view {
-
     .video__play {
         width: 100%;
         padding-bottom: 56.2%;
@@ -127,7 +124,6 @@
             }
 
             .count {
-
                 span {
                     border-radius: 40px;
                     font-size: 14px;
@@ -145,5 +141,5 @@
         .video__desc {
             white-space: pre-line;
         }
-    } 
+    }
 }
