@@ -1,0 +1,106 @@
+#youtuber {
+    .fession__wrap {
+        display: flex;
+        flex-wrap: wrap;
+
+        .fession {
+            margin-right: 20px;
+            margin-bottom: 30px;
+            padding: 1rem 2rem 1rem 2rem;
+            .fession:hover {
+                border: 1px solid var(--black100);
+                background-color: var(--black500);
+            }
+            .fession__img {
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .fession__img:hover::before {
+                content: "";
+                position: absolute;
+                background: rgba(0, 0, 0, 0.371) url(../../img/play.svg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                top: 40%;
+                left: 34%;
+                width: 50px;
+                height: 50px;
+            }
+            .fession__info {
+                text-align: center;
+            }
+        }
+    }
+}
+
+#fessionPage {
+    .fession__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        .fession__inner {
+            margin-right: 10px;
+            margin-bottom: 20px;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        .fession:hover {
+            border: 1px solid var(--black100);
+            background-color: var(--black500);
+        }
+        .fession__img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .fession__img:hover::before {
+            content: "";
+            position: absolute;
+            background: rgba(0, 0, 0, 0.371) url(../../img/play.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            top: 40%;
+            left: 34%;
+            width: 50px;
+            height: 50px;
+        }
+        .fession__info {
+            text-align: center;
+        }
+        // 글자 밑으로 떨어지게
+    }
+
+    @media (max-width: 800px) {
+        .fession__inner {
+            justify-content: space-between;
+            .fession {
+                width: 23%;
+                margin-right: 0;
+            }
+            .fession__img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    @media (max-width: 800px) {
+        .fession__inner {
+            .fession {
+                width: 31%;
+            }
+        }
+    }
+    @media (max-width: 400px) {
+        .fession__inner {
+            .fession {
+                width: 48%;
+            }
+        }
+    }
+}

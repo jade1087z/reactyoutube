@@ -14,7 +14,6 @@ section {
     }
 }
 
-
 /* 스크롤바 막대 색상 및 모양 변경 */
 ::-webkit-scrollbar-thumb {
     background: white; /* 스크롤바 막대 색상 */
@@ -31,43 +30,12 @@ section {
     background: white;
 }
 
-// 
-.play__icon {
-    a {
-        position: relative;
-        display: block;
-        cursor: pointer;
-        width: 100%;
-
-        &::before {
-            content: '';
-            width: 100%;
-            height: 100%;
-            background-color: #00000025;
-            position: absolute;
-            left: 0;
-            top: 0;
-            transition: background-color 0.3s;
-        }
-
-        &:hover {
-            background-color: #00000000;
-        }
-        &::after {
-            content: '';
-            width: 80px;
-            height: 80px;
-            background: rgba(131, 131, 131, 0.171) url(../../img/play.svg);
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        &:hover::after{
-            opacity: 1;
-        }
-    }
+//channelPageClass 로딩 소스
+.isLoading {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.isLoaded {
+    opacity: 1;
+    transition: opacity 1s;
 }
