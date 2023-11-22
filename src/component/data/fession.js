@@ -36,12 +36,6 @@ export const fessionData = [
         channelAddress: "https://www.youtube.com/@mylibrary",
     },
     {
-        img: "https://yt3.googleusercontent.com/T129Qz21vlWwa-9L7tT13jGno1wnb6U5tnuyEi1mJb71Mqt6FZUHkAAFwUVs-Ff5m-kA_pI_=s176-c-k-c0x00ffffff-no-rj",
-        author: "썅마이웨이",
-        channelId: "UCiNznBSpLElEuerXYcwKyZA",
-        channelAddress: "https://www.youtube.com/@mylibrary",
-    },
-    {
         img: "https://yt3.googleusercontent.com/ytc/APkrFKZNjbi4j9HWHPNVV5r3NyaKbWE37eXzqGHNi-NF=s176-c-k-c0x00ffffff-no-rj",
         author: "깡스타일리스트",
         channelId: "UC8a6z7i9qypp9PqJ_0HhBrw",

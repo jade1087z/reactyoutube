@@ -4,8 +4,8 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 const Logo = () => {
     const dispatch = useDispatch();
-
     const handleClick = () => {
+        console.log("handleClick function is called");
         dispatch({ type: "TOGGLE_SHOW" });
     };
     return (

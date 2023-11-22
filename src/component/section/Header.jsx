@@ -4,7 +4,7 @@ import Menu from "./header/Menu";
 import Sns from "./header/Sns";
 import { useSelector } from "react-redux";
 const Header = () => {
-    const { isShow } = useSelector((state) => state);
+    const isShow = useSelector((state) => state.isShow);
 
     return (
         <header id="header" role="banner" className={isShow ? "" : "show"}>

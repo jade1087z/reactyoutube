@@ -12,7 +12,7 @@ const Channel = () => {
     const [nextPageToken, setNextPageToken] = useState(null);
 
     useEffect(() => {
-        const fetchReults = async () => {
+        const fetchResults = async () => {
             try {
                 const data = await fetchFromAPI(
                     `channels?part=snippet&id=${channelId}`
@@ -35,7 +35,7 @@ const Channel = () => {
                 setLoading(false);
             }
         };
-        fetchReults();
+        fetchResults();
     }, [channelId]);
 
     const fetchChannelVideo = (query, pageToken = "") => {

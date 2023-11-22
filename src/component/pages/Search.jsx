@@ -14,20 +14,6 @@ const Search = () => {
         fetchvideos(searchId);
     }, [searchId]);
 
-    // const fetchvideos = (query, pageToken = "") => {
-    //     fetchFromAPI(
-    //         `search?type=video&part=snippet&q=${query}&pageToken=${pageToken}`
-    //     )
-    //         .then((data) => {
-    //             setNextPageToken(data.nextPageToken);
-    //             setVideos((prevVidos) => [...prevVidos, ...data.items]);
-    //             console.log(data.items);
-    //         })
-    //         .catch((error) => {
-    //             console.log("error fetching data", error);
-    //         });
-    // };
-
     const fetchvideos = async (query, pageToken = "") => {
         try {
             setLoading(true);
