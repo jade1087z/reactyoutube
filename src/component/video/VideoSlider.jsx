@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 const VideoSlider = ({ name, videos, title }) => {
     console.log(videos); // videos prop의 내용 출력
+    const [classIndex, setClassIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setClassIndex((prevIndex) => prevIndex + 1);
+        }, 2500);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section id={name}>
             <h2>{title}</h2>
@@ -16,7 +26,11 @@ const VideoSlider = ({ name, videos, title }) => {
                     slidesPerView={1}
                     spaceBetween={20}
                     navigation={true}
-                    modules={[Navigation]}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    modules={[Autoplay, Navigation]}
                     className={`mySwiper-${name}`}
                     breakpoints={{
                         640: {
@@ -40,7 +54,7 @@ const VideoSlider = ({ name, videos, title }) => {
                     {videos.length > 0 &&
                         videos.map((video, key) => (
                             <SwiperSlide key={key}>
-                                <div className="video">
+                                <div className={`video ${key < classIndex ? 'class-${key}' : ''}`}>
                                     <div className="video__thumb play__icon">
                                         <Link
                                             to={`/video/${video.id.videoId}`}
