@@ -44,12 +44,13 @@ const Video = () => {
                             <ReactPlayer
                                 playing={true}
                                 url={`https://www.youtube.com/watch?v=${videoId}`}
-                                width="100%"
-                                height="100%"
+                                width="85%"
+                                height="85%"
                                 style={{
                                     position: "absolute",
                                     top: 0,
                                     left: 0,
+                                    padding: 20,
                                 }}
                             />
                         </div>
