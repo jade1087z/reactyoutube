@@ -1,4 +1,4 @@
-<img src="homeImg.png" />
+<img src="./src/assets/img/homeImg.png" />
 
 # 나만의 패션 유튜브 사이트 만들기
 
