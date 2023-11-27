@@ -33,6 +33,7 @@ const Channel = () => {
                     `channels?part=snippet&id=${channelId}`
                 );
                 setChannelDetail(data.items[0]);
+                console.log(data);
                 console.log(data.items[0]);
 
                 const videoData = await fetchFromAPI(

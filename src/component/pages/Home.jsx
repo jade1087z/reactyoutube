@@ -10,18 +10,21 @@ const Home = () => {
     const [channelVideo, setChannelVideo] = useState([]);
 
     const channelIds = fessionData.map((item) => item.channelId); // 채널 데이터 가져와서 배열로 저장하기
+    const channelId = "UCr6kh7Iujsdqdqo_rp_sKrA";
 
     useEffect(() => {
-        const fetchResults = async () => {
+        const fetchvideos = async () => {
             try {
                 const data = await fetchFromAPI(
-                    `channels?part=snippet&id=${channelIds}`
+                    `search?channelId=${channelId}&part=snippet&order=date`
                 );
+                setChannelVideo(data);
             } catch (error) {
                 console.log(error);
             }
         };
-    });
+        fetchvideos();
+    }, [0]);
 
     return (
         <Main title="패션 유튜버" description="패션 유튜버 영상 모음입니다.">

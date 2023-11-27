@@ -12,10 +12,10 @@ const VideoSlider = ({ name, videos, title }) => {
     useEffect(() => {
         const interval = setInterval(() => {
             setClassIndex((prevIndex) => prevIndex + 1);
-        }, 2500);
+        }, 222222500);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [0]);
 
     return (
         <section id={name}>
@@ -54,7 +54,11 @@ const VideoSlider = ({ name, videos, title }) => {
                     {videos.length > 0 &&
                         videos.map((video, key) => (
                             <SwiperSlide key={key}>
-                                <div className={`video ${key < classIndex ? 'class-${key}' : ''}`}>
+                                <div
+                                    className={`video ${
+                                        key < classIndex ? "class-${key}" : ""
+                                    }`}
+                                >
                                     <div className="video__thumb play__icon">
                                         <Link
                                             to={`/video/${video.id.videoId}`}

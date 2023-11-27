@@ -11,7 +11,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 const Fession = () => {
     return (
         <section id="youtuber">
-            <h2>🤞패션 유튜버 모음</h2>
+            <h2>🤞 패션 유튜버 모음 🤞</h2>
             <div className="fession__wrap">
                 <Swiper
                     slidesPerView={0}

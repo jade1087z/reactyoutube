@@ -9,6 +9,7 @@ const Search = () => {
     const [videos, setVideos] = useState([]);
     const [nextPageToken, setNextPageToken] = useState(null);
     const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         setVideos([]);
         fetchvideos(searchId);

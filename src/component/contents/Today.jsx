@@ -1,18 +1,25 @@
 import React from "react";
 import { todayText } from "../data/today";
+import { Link } from "react-router-dom";
 
 const Today = () => {
     return (
         <section id="todayPage">
-            <h2># 오늘의 인기 급상승 동영상</h2>
+            <div className="today__pick">
+                <h2>🤞 오늘의 인기 급상승 동영상 🤞</h2>
+            </div>
             <div className="today__inner">
-                <div className="today__thumb"></div>
+                <div className="today__thumb">
+                    <div className="thumb__img"></div>
+                </div>
                 <div className="today__text">
+                    <div className="today">
+                        <h2># 오늘의 인기 급상승 동영상 #</h2>
+                    </div>
                     <div className="text__wrap">
-                        <span className="today">
-                            # 오늘의 인기 급상승 동영상
-                        </span>
-                        <h3 className="title">{todayText[0].title}</h3>
+                        <h3 className="title">
+                            <Link To="#">{todayText[0].title}</Link>
+                        </h3>
                         <p className="desc">{todayText[0].desc}</p>
                     </div>
                     <div className="info">

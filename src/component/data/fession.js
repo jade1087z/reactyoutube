@@ -1,5 +1,11 @@
 export const fessionData = [
     {
+        img: "https://yt3.googleusercontent.com/ckUAx9WbZU8uDwzZrUwzC_5mm7fCbF2x04oUcU5t_AGGyBEI2-K5-UwzDLkt4zEu53I-Q2H_FA=s176-c-k-c0x00ffffff-no-rj",
+        author: "짱구대디",
+        channelId: "UCDDg_5VSrUPeS_h3nSqjMTg",
+        channelAddress: "https://www.youtube.com/@zzang9daddy",
+    },
+    {
         img: "https://yt3.googleusercontent.com/FkfV1RyfkesNjgYp_rcmUYiZrCeCJ5gkF6SDeYObQfeNczj5SvrTIbflKwnOck_38eyio6tlxg=s176-c-k-c0x00ffffff-no-rj",
         author: "키작은광자",
         channelId: "UCr6kh7Iujsdqdqo_rp_sKrA",
@@ -17,12 +23,7 @@ export const fessionData = [
         channelId: "UC79CxOQz8FQB4w5iHWEjJtQ",
         channelAddress: "https://www.youtube.com/@STalkers",
     },
-    {
-        img: "https://yt3.googleusercontent.com/ckUAx9WbZU8uDwzZrUwzC_5mm7fCbF2x04oUcU5t_AGGyBEI2-K5-UwzDLkt4zEu53I-Q2H_FA=s176-c-k-c0x00ffffff-no-rj",
-        author: "짱구대디",
-        channelId: "UCDDg_5VSrUPeS_h3nSqjMTg",
-        channelAddress: "https://www.youtube.com/@zzang9daddy",
-    },
+
     {
         img: "https://yt3.googleusercontent.com/Jv-Q0-VA51UnjirHAcdEHldcmS3bbRjlW53PvcoEbJv6LiNMKyhZUI2qxUR78xrJNWUJiIDXug=s176-c-k-c0x00ffffff-no-rj",
         author: "호수",
