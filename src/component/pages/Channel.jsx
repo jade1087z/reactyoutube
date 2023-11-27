@@ -8,8 +8,23 @@ const Channel = () => {
     const { channelId } = useParams();
     const [channelDetail, setChannelDetail] = useState();
     const [channelVideo, setChannelVideo] = useState([]);
+    const [mainVideo, setMainVideo] = useState();
     const [loading, setLoading] = useState(true);
     const [nextPageToken, setNextPageToken] = useState(null);
+
+    useEffect(() => {
+        const fetchResults = async () => {
+            try {
+                const data = await fetchFromAPI(
+                    `videos?part=snippet,statistics&id=${channelId}`
+                );
+                setMainVideo(data.items[0]);
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        fetchResults();
+    }, [channelId]);
 
     useEffect(() => {
         const fetchResults = async () => {
@@ -18,9 +33,8 @@ const Channel = () => {
                     `channels?part=snippet&id=${channelId}`
                 );
                 setChannelDetail(data.items[0]);
-                console.log(setChannelDetail(data.items[0]));
                 console.log(data.items[0]);
-                console.log(channelVideo);
+
                 const videoData = await fetchFromAPI(
                     `search?channelId=${channelId}&part=snippet&order=date`
                 );
@@ -87,7 +101,9 @@ const Channel = () => {
                         </div>
 
                         <div className="channel__info">
-                            <div className="main__video"></div>
+                            <div className="main__video">
+                                {/* mainVideo 1위 넣어주기  */}
+                            </div>
 
                             <div className="info">
                                 <h3 className="title">

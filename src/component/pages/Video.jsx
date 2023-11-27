@@ -40,19 +40,21 @@ const Video = () => {
             <section id="videoPage" className={channelPageClass}>
                 {videoDetail && (
                     <div className="video__view">
-                        <div className="video__play">
-                            <ReactPlayer
-                                playing={true}
-                                url={`https://www.youtube.com/watch?v=${videoId}`}
-                                width="85%"
-                                height="85%"
-                                style={{
-                                    position: "absolute",
-                                    top: 0,
-                                    left: 0,
-                                    padding: 20,
-                                }}
-                            />
+                        <div className="video__center">
+                            <div className="video__play">
+                                <ReactPlayer
+                                    playing={true}
+                                    url={`https://www.youtube.com/watch?v=${videoId}`}
+                                    width="100%"
+                                    height="100%"
+                                    style={{
+                                        position: "absolute",
+                                        top: 0,
+                                        left: 0,
+                                        padding: 20,
+                                    }}
+                                />
+                            </div>
                         </div>
                         <div className="video__info">
                             <h2 className="video__title">

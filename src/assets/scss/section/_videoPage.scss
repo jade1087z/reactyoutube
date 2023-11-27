@@ -6,10 +6,15 @@
     }
 }
 .video__view {
-    .video__play {
+    .video__center {
+        display: flex;
+        justify-content: center;
         width: 100%;
-        padding-bottom: 56.2%;
-        position: relative;
+        .video__play {
+            width: 80%;
+            padding-bottom: 56.2%;
+            position: relative;
+        }
     }
 
     .video__info {
