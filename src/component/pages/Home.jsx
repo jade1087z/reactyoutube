@@ -11,7 +11,7 @@ const Home = () => {
 
     const channelIds = fessionData.map((item) => item.channelId); // 채널 데이터 가져와서 배열로 저장하기
     const channelId = "UCr6kh7Iujsdqdqo_rp_sKrA";
-
+    //
     useEffect(() => {
         const fetchvideos = async () => {
             try {
