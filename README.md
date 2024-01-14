@@ -4,6 +4,9 @@
 
 -   rapidApi에서 유튜브 api를 가져와 패션 유튜브 사이트를 만들었습니다.
 
+## 배포 방법 
+- netlify를 통한 배포
+-  https://fessionyoutube.netlify.app/ 
 ## 사용한 라이브러리, api
 
 # SWIPER JS 사용
